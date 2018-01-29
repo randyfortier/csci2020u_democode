@@ -17,6 +17,7 @@ import java.net.*;
 public class Sample1 extends Application {
   private BorderPane layout;
   private TableView<Student> table;
+  private TextField sidField, fnameField;
 
   public void start(Stage primaryStage) throws Exception {
     primaryStage.setTitle("JavaFX Sample 1");
@@ -76,17 +77,67 @@ public class Sample1 extends Application {
     lastNameColumn = new TableColumn<>("Last Name");
     lastNameColumn.setMinWidth(200);
     lastNameColumn.setCellValueFactory(new PropertyValueFactory<>("lastName"));
+    lastNameColumn.setCellFactory(TextFieldTableCell.<Student>forTableColumn());
+    lastNameColumn.setOnEditCommit((CellEditEvent<Student, String> event) -> {
+      // TODO: Push changes to the database
+      int index = event.getTablePosition().getRow();
+      Student student = event.getTableView().getItems().get(index);
+      student.setLastName(event.getNewValue());
+    });
 
     TableColumn<Student,Double> gpaColumn = null;
     gpaColumn = new TableColumn<>("GPA");
     gpaColumn.setMinWidth(100);
     gpaColumn.setCellValueFactory(new PropertyValueFactory<>("gpa"));
 
+    table.getColumns().add(sidColumn);
+    table.getColumns().add(firstNameColumn);
+    table.getColumns().add(lastNameColumn);
+    table.getColumns().add(gpaColumn);
+
+    GridPane editArea = new GridPane();
+    editArea.setPadding(new Insets(10, 10, 10, 10));
+    editArea.setVgap(10);
+    editArea.setHgap(10);
+
+    Label sidLabel = new Label("SID:");
+    editArea.add(sidLabel, 0, 0);
+    sidField = new TextField();
+    sidField.setPromptText("100200300");
+    editArea.add(sidField, 1, 0);
+
+    Label fnameLabel = new Label("First name:");
+    editArea.add(fnameLabel, 0, 1);
+    fnameField = new TextField();
+    fnameField.setPromptText("Barb");
+    editArea.add(fnameField, 1, 1);
+
+    Button addButton = new Button("Add");
+    editArea.add(addButton, 1, 4);
+    addButton.setOnAction(new EventHandler<ActionEvent>() {
+      @Override
+      public void handle(ActionEvent event) {
+        // collect the data from the UI for our new student
+        int sid = Integer.parseInt(sidField.getText());
+        String firstName = fnameField.getText();
+        // TODO:  Add the other fields' data also
+        Student newStudent = new Student(sid, firstName, "", 0.0);
+
+        // add the data to our data source
+        table.getItems().add(newStudent);
+
+        // clear the text fields (UX)
+        sidField.setText("");
+        fnameField.setText("");
+      }
+    });
 
     // initialize the border pane
     layout = new BorderPane();
-    // TODO: Place UI elements
+    // Place UI elements
     layout.setTop(menuBar);
+    layout.setCenter(table);
+    layout.setBottom(editArea);
 
     Scene scene = new Scene(layout, 600, 600);
     primaryStage.setScene(scene);
