@@ -1,0 +1,36 @@
+.tab-pane .tab {
+    -fx-background-color: linear-gradient(#D0D0D0, #B0B0B0);
+}
+
+.tab-pane .tab:selected {
+    -fx-background-color: linear-gradient(#857DB1, #5D5393);
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.tab .tab-label {
+    -fx-alignment: CENTER;
+    -fx-text-fill: #404040;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.tab:selected .tab-label {
+    -fx-text-fill: white;
+}
+
+.code {
+    -fx-font-family: 'Courier New' monospace;
+    -fx-font-size: 16px;
+}
+
+.bg {
+    -fx-background-color: #D8D8EA;
+}
+
+.button {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-color: linear-gradient(#857DB1, #5D5393);
+    -fx-font-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 5, 0.0, 0, 1);
+}
