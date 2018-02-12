@@ -9,13 +9,14 @@ public class WordCounter {
   }
 
   public void processFile(File file) throws IOException {
+    System.out.println("Processing " + file.getAbsolutePath() + "...");
     if (file.isDirectory()) {
       // process all the files in that directory
       File[] contents = file.listFiles();
       for (File current: contents) {
         processFile(current);
       }
-    } if (file.exists()) {
+    } else if (file.exists()) {
       // count the words in this file
       Scanner scanner = new Scanner(file);
       scanner.useDelimiter("\\s");//"[\s\.;:\?\!,]");//" \t\n.;,!?-/\\");
@@ -52,24 +53,32 @@ public class WordCounter {
   public void outputWordCounts(int minCount, File outFile)
                               throws IOException {
     System.out.println("Saving word counts to " + outFile.getAbsolutePath());
-    if (!outFile.exists() && outFile.canWrite()) {
-      PrintWriter fileOut = new PrintWriter(outFile);
+    System.out.println("# of words: " + wordCounts.keySet().size());
+    if (!outFile.exists()) {
+      outFile.createNewFile();
+      if (outFile.canWrite()) {
+        PrintWriter fileOut = new PrintWriter(outFile);
 
-      Set<String> keys = wordCounts.keySet();
-      Iterator<String> keyIterator = keys.iterator();
+        Set<String> keys = wordCounts.keySet();
+        Iterator<String> keyIterator = keys.iterator();
 
-      while (keyIterator.hasNext()) {
-        String key = keyIterator.next();
-        int count = wordCounts.get(key);
+        while (keyIterator.hasNext()) {
+          String key = keyIterator.next();
+          int count = wordCounts.get(key);
 
-        if (count >= minCount) {
-          fileOut.println(key + ": " + count);
+          if (count >= minCount) {
+            fileOut.println(key + ": " + count);
+          }
         }
-      }
 
-      fileOut.close();
+        fileOut.close();
+      } else {
+        System.err.println("Error:  Cannot write to file: " + outFile.getAbsolutePath());
+      }
     } else {
-      System.err.println("Error:  Cannot write to file " + outFile.getAbsolutePath());
+      System.err.println("Error:  File already exists: " + outFile.getAbsolutePath());
+      System.out.println("outFile.exists(): " + outFile.exists());
+      System.out.println("outFile.canWrite(): " + outFile.canWrite());
     }
   }
 
