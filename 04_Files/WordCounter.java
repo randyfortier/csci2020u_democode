@@ -18,7 +18,7 @@ public class WordCounter {
     } if (file.exists()) {
       // count the words in this file
       Scanner scanner = new Scanner(file);
-      scanner.setDelimiter(" \t\n.;,!?-/\\");
+      scanner.useDelimiter("\\s");//"[\s\.;:\?\!,]");//" \t\n.;,!?-/\\");
       while (scanner.hasNext()) {
         String word = scanner.next();
         if (isWord(word)) {
@@ -35,13 +35,62 @@ public class WordCounter {
     } else {
       return false;
     }
+
+    // also fine:
+    //return word.matches(pattern);
   }
 
   private void countWord(String word) {
-    // TODO: Next week!
+    if (wordCounts.containsKey(word)) {
+      int oldCount = wordCounts.get(word);
+      wordCounts.put(word, oldCount+1);
+    } else {
+      wordCounts.put(word, 1);
+    }
+  }
+
+  public void outputWordCounts(int minCount, File outFile)
+                              throws IOException {
+    System.out.println("Saving word counts to " + outFile.getAbsolutePath());
+    if (!outFile.exists() && outFile.canWrite()) {
+      PrintWriter fileOut = new PrintWriter(outFile);
+
+      Set<String> keys = wordCounts.keySet();
+      Iterator<String> keyIterator = keys.iterator();
+
+      while (keyIterator.hasNext()) {
+        String key = keyIterator.next();
+        int count = wordCounts.get(key);
+
+        if (count >= minCount) {
+          fileOut.println(key + ": " + count);
+        }
+      }
+
+      fileOut.close();
+    } else {
+      System.err.println("Error:  Cannot write to file " + outFile.getAbsolutePath());
+    }
   }
 
   public static void main(String[] args) {
+    if (args.length < 2) {
+      System.err.println("Usage: java WordCounter <dir> <outfile>");
+      System.exit(0);
+    }
 
+    WordCounter wordCounter = new WordCounter();
+    File dataDir = new File(args[0]);
+    File outFile = new File(args[1]);
+
+    try {
+      wordCounter.processFile(dataDir);
+      wordCounter.outputWordCounts(2, outFile);
+    } catch (FileNotFoundException e) {
+      System.err.println("Invalid input dir: " + dataDir.getAbsolutePath());
+      e.printStackTrace();
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
   }
 }
