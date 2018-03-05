@@ -23,3 +23,7 @@ No demos were part of this lecture.
 - a demo using files to read .CSV data and calculate the average
 - a demo using files to count the words in a file
 	* useful for a reference for assignments 1 and 2
+
+## Sockets (Section 05)
+- a demo using _URL_ and _URLConnection_ to download YouTube data (JSON)
+- a demo using _URL_ and _URLConnection_ to download Bike Share data (XML; simulated)
