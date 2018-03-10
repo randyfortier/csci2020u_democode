@@ -20,10 +20,16 @@ No demos were part of this lecture.
 - a demo using _JavaFX_, where the user interface was designed in FXML (an XML-based language)
 
 ## Files I/O and Streams (Section 04)
+
 - a demo using files to read .CSV data and calculate the average
 - a demo using files to count the words in a file
 	* useful for a reference for assignments 1 and 2
 
 ## Sockets (Section 05)
+
 - a demo using _URL_ and _URLConnection_ to download YouTube data (JSON)
 - a demo using _URL_ and _URLConnection_ to download Bike Share data (XML; simulated)
+
+## Threads (Section 06)
+
+- a demo using only threads that simulates a horse race
