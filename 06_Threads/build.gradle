@@ -1,0 +1,10 @@
+apply plugin: 'java'
+
+repositories {
+   mavenCentral()
+}
+
+task(runHttpServer, dependsOn: 'classes', type: JavaExec) {
+   main = 'HttpServer'
+   classpath = sourceSets.main.runtimeClasspath
+}
