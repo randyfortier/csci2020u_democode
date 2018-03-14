@@ -1,0 +1,38 @@
+#wrapper {
+    margin: 0;
+    width: 100%;
+    background: #f0f0f0;
+    border: 0;
+    border-radius: 0;
+    box-shadow: 0 0 0 0;
+}
+.threecol {
+    clear: both;
+    float: none;
+    width: 100%;
+    margin-left: 0;
+}
+header nav ul {
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 100px;
+    text-align: center;
+    margin-left: 0;
+    padding-left: 0;
+    background-color: #8D177B;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0px rgba(12, 3, 25, 0.8);
+}
+header nav ul li {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-right: 20px;
+}
+#menu-icon {
+    display: block;
+}
+nav:hover ul {
+    display: block;
+}
