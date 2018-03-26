@@ -5,25 +5,32 @@ import javax.persistence.*;
 @Entity
 @Table(name="products")
 public class Product {
-  @Id
-  @Column(name="id")
-  @SequenceGenerator(name="product_id",
-                     sequenceName="products_seq_id",
-                     allocationSize=1)
-  @GeneratedValue(strategy=GenerationType.SEQUENCE,
-                  generator="product_id")
-  private long prodId;
-  private String name;
-  private String category;
-  private double price;
+   @Id
+   @Column(name="id")
+   @SequenceGenerator(name="product_id", sequenceName="products_id_seq", allocationSize=1)
+   @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="product_id")
+   private long prodID;
+   private String name;
+   private String category;
+   private double price;
 
-  public long getProdId() { return prodId; }
-  public String getName() { return name; }
-  public String getCategory() { return category; }
-  public double getPrice() { return price; }
+   public Product() {}
 
-  public void setProdId(long newVal) { this.prodId = newVal; }
-  public void setName(String newVal) { this.name = newVal; }
-  public void setCategory(String newVal) { this.category = newVal; }
-  public void setPrice(double newVal) { this.price = newVal; }
+   public Product(String name,
+                  String category,
+                  double price) {
+     this.name = name;
+     this.category = category;
+     this.price = price;
+   }
+
+   public long getProdID() { return prodID; }
+   public String getName() { return name; }
+   public String getCategory() { return category; }
+   public double getPrice() { return price; }
+
+   public void setProdID(long id) { this.prodID = id; }
+   public void setName(String name) { this.name = name; }
+   public void setCategory(String category) { this.category = category; }
+   public void setPrice(double price) { this.price = price; }
 }

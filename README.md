@@ -33,3 +33,9 @@ No demos were part of this lecture.
 ## Threads (Section 06)
 
 - a demo using only threads that simulates a horse race
+- a demo where we create an HTTP client and an HTTP server
+- a demo where we create a chat client and chat server
+
+## Java Persistence (Section 08)
+
+- a demo showing basic entities, client code, and relationship
