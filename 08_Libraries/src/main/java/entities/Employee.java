@@ -3,6 +3,8 @@ package entities;
 import javax.persistence.*;
 
 @Entity
+@NamedQuery(name="Employee.findByName",
+            query="SELECT e FROM Employee e WHERE e.name = :name")
 public class Employee {
    @Id
    @SequenceGenerator(name="employee_id", sequenceName="employees_id_seq", allocationSize=1)

@@ -80,6 +80,24 @@ public class Main {
     entityManager.getTransaction().commit();
   }
 
+  public void findEmployees(String keyword) {
+    TypedQuery<Employee> query = entityManager.createQuery("select e from Employee e where e.name like concat('%', :keyword, '%')",
+                                                           Employee.class);
+    query.setParameter("keyword", keyword);
+    List<Employee> results = query.getResultList();
+    for (Employee employee: results) {
+      System.out.println(employee.getName());
+    }
+  }
+
+  public Employee findEmployeeByName(String name) {
+    TypedQuery<Employee> query = entityManager.createNamedQuery("Employee.findByName",
+                                                                Employee.class);
+    query.setParameter("name", name);
+    Employee employee = query.getSingleResult();
+    return employee;
+  }
+
   public static void main(String[] args) {
     Properties props = new Properties();
 
@@ -100,7 +118,19 @@ public class Main {
     app.deleteAllEmployees();
     app.deleteAllTeams();
     app.deleteAllProjects();
+    String[] teamMembers = new String[] {
+      "Ralph Wiggum",
+      "Lisa Simpson",
+      "Mr. Smithers",
+      "Disco Stu",
+      "Marge Simpson"
+    };
+    app.createTeam("The Elite Team", "Revamp the Contabulator", teamMembers);
+    app.findEmployees("imps");
+    Employee stu = app.findEmployeeByName("Disco Stu");
+    System.out.println("Disco Stu was found? " + stu.getName());
 
+    entityManager.close();
   }
 
 
