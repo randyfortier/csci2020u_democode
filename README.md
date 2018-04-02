@@ -39,3 +39,7 @@ No demos were part of this lecture.
 ## Java Persistence (Section 08)
 
 - a demo showing basic entities, client code, and relationship
+
+## Testing (Section 07)
+
+- a demo showing how to automate unit tests with junit
