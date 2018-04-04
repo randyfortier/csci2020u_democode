@@ -3,8 +3,12 @@ buildscript {
     mavenCentral()
   }
   dependencies {
-    classpath 'org.junit.platform:junit-platform-gradle-plugin:1.0.0-M3'
+    classpath 'org.junit.platform:junit-platform-gradle-plugin:1.1.0'
   }
+}
+
+repositories {
+  mavenCentral()
 }
 
 apply plugin: 'java'
@@ -18,11 +22,20 @@ junitPlatform {
     tags {
       //exclude 'slow'
     }
+    //packages {
+    //  include 'demo' //, 'validation'
+    //}
   }
 }
 
 ext.junitJupiterVersion  = '5.1.0'
+
 dependencies {
   testCompile("org.junit.jupiter:junit-jupiter-api:${junitJupiterVersion}")
   testRuntime("org.junit.jupiter:junit-jupiter-engine:${junitJupiterVersion}")
+}
+
+task(run, dependsOn: 'classes', type: JavaExec) {
+   main = 'validation.Validator'
+   classpath = sourceSets.main.runtimeClasspath
 }

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="JUnit Jupiter" tests="2" skipped="0" failures="1" errors="0" time="0.042" hostname="DESKTOP-U0HINQT" timestamp="2018-04-04T11:29:46">
+<properties>
+<property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+<property name="file.encoding" value="windows-1252"/>
+<property name="file.encoding.pkg" value="sun.io"/>
+<property name="file.separator" value="\"/>
+<property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+<property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+<property name="java.class.path" value="D:\Winter 2018\CSCI 2020u\demos_w2018\csci2020u_democode\07_Testing\build\classes\java\test;D:\Winter 2018\CSCI 2020u\demos_w2018\csci2020u_democode\07_Testing\build\resources\test;D:\Winter 2018\CSCI 2020u\demos_w2018\csci2020u_democode\07_Testing\build\classes\java\main;D:\Winter 2018\CSCI 2020u\demos_w2018\csci2020u_democode\07_Testing\build\resources\main;C:\Users\rfortier\.gradle\caches\modules-2\files-2.1\org.junit.jupiter\junit-jupiter-engine\5.1.0\c54b96b465bb5b49c7708d734a4180dd95422754\junit-jupiter-engine-5.1.0.jar;C:\Users\rfortier\.gradle\caches\modules-2\files-2.1\org.junit.jupiter\junit-jupiter-api\5.1.0\370218fbc7ce9cf0600c4b5db400bccdf0c01a48\junit-jupiter-api-5.1.0.jar;C:\Users\rfortier\.gradle\caches\modules-2\files-2.1\org.junit.platform\junit-platform-engine\1.1.0\2596bd4d909e7ea8d029272db4338075445d731b\junit-platform-engine-1.1.0.jar;C:\Users\rfortier\.gradle\caches\modules-2\files-2.1\org.junit.platform\junit-platform-commons\1.1.0\d6aa21029f9cedfb4cc8a9e9efc0bd97987205b8\junit-platform-commons-1.1.0.jar;C:\Users\rfortier\.gradle\caches\modules-2\files-2.1\org.apiguardian\apiguardian-api\1.0.0\3ef5276905e36f4d8055fe3cb0bdcc7503ffc85d\apiguardian-api-1.0.0.jar;C:\Users\rfortier\.gradle\caches\modules-2\files-2.1\org.opentest4j\opentest4j\1.0.0\6f09c598e9ff64bf0ce2fa7e7de49a99ba83c0b4\opentest4j-1.0.0.jar;C:\Users\rfortier\.gradle\caches\modules-2\files-2.1\org.junit.platform\junit-platform-console\1.1.0\1ea376db54ab4ec0018c5e99d414e1c7c034387\junit-platform-console-1.1.0.jar;C:\Users\rfortier\.gradle\caches\modules-2\files-2.1\org.junit.platform\junit-platform-launcher\1.1.0\ba098edde4e59cacd9225e238ea3ad9c946684ab\junit-platform-launcher-1.1.0.jar"/>
+<property name="java.class.version" value="53.0"/>
+<property name="java.home" value="C:\Program Files\Java\jdk-9.0.1"/>
+<property name="java.io.tmpdir" value="C:\Users\rfortier\AppData\Local\Temp\"/>
+<property name="java.library.path" value="C:\Program Files\Java\jdk-9.0.1\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:\Dev\devkitPro\msys\bin;C:\Perl64\site\bin;C:\Perl64\bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\nodejs\;D:\Dev\gradle-4.4.1\bin;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files (x86)\Microsoft Emulator Manager\1.0\;C:\Program Files\Git\cmd;C:\HashiCorp\Vagrant\bin;C:\Program Files\TortoiseHg\;C:\Users\rfortier\AppData\Local\Microsoft\WindowsApps;C:\Users\rfortier\AppData\Local\atom\bin;C:\Users\rfortier\AppData\Local\Microsoft\WindowsApps;C:\Users\rfortier\AppData\Roaming\npm;c:\Program Files\Java\jdk-9.0.1\bin;C:\Program Files\MongoDB\Server\3.6\bin;;C:\Program Files\Microsoft VS Code\bin;."/>
+<property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+<property name="java.runtime.version" value="9.0.1+11"/>
+<property name="java.specification.name" value="Java Platform API Specification"/>
+<property name="java.specification.vendor" value="Oracle Corporation"/>
+<property name="java.specification.version" value="9"/>
+<property name="java.vendor" value="Oracle Corporation"/>
+<property name="java.vendor.url" value="http://java.oracle.com/"/>
+<property name="java.vendor.url.bug" value="http://bugreport.java.com/bugreport/"/>
+<property name="java.version" value="9.0.1"/>
+<property name="java.vm.compressedOopsMode" value="Zero based"/>
+<property name="java.vm.info" value="mixed mode"/>
+<property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+<property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+<property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+<property name="java.vm.specification.version" value="9"/>
+<property name="java.vm.vendor" value="Oracle Corporation"/>
+<property name="java.vm.version" value="9.0.1+11"/>
+<property name="jdk.debug" value="release"/>
+<property name="line.separator" value="
+"/>
+<property name="os.arch" value="amd64"/>
+<property name="os.name" value="Windows 10"/>
+<property name="os.version" value="10.0"/>
+<property name="path.separator" value=";"/>
+<property name="sun.arch.data.model" value="64"/>
+<property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-9.0.1\bin"/>
+<property name="sun.cpu.endian" value="little"/>
+<property name="sun.cpu.isalist" value="amd64"/>
+<property name="sun.desktop" value="windows"/>
+<property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+<property name="sun.java.command" value="org.junit.platform.console.ConsoleLauncher --details NONE --scan-class-path D:\Winter 2018\CSCI 2020u\demos_w2018\csci2020u_democode\07_Testing\build\classes\java\main;D:\Winter 2018\CSCI 2020u\demos_w2018\csci2020u_democode\07_Testing\build\resources\main;D:\Winter 2018\CSCI 2020u\demos_w2018\csci2020u_democode\07_Testing\build\classes\java\test;D:\Winter 2018\CSCI 2020u\demos_w2018\csci2020u_democode\07_Testing\build\resources\test -n ^.*Tests?$ -e junit-jupiter --reports-dir D:\Winter 2018\CSCI 2020u\demos_w2018\csci2020u_democode\07_Testing\build\test-results\junit-platform"/>
+<property name="sun.java.launcher" value="SUN_STANDARD"/>
+<property name="sun.jnu.encoding" value="Cp1252"/>
+<property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+<property name="sun.os.patch.level" value=""/>
+<property name="user.country" value="US"/>
+<property name="user.dir" value="D:\Winter 2018\CSCI 2020u\demos_w2018\csci2020u_democode\07_Testing"/>
+<property name="user.home" value="C:\Users\rfortier"/>
+<property name="user.language" value="en"/>
+<property name="user.name" value="rfortier"/>
+<property name="user.script" value=""/>
+<property name="user.timezone" value="America/New_York"/>
+<property name="user.variant" value=""/>
+</properties>
+<testcase name="aTestThatFails()" classname="demo.BasicTest" time="0.01">
+<failure message="This should never succeed since 1 != 2 ==&gt; expected: &lt;1&gt; but was: &lt;2&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: This should never succeed since 1 != 2 ==> expected: <1> but was: <2>
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:52)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:154)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:312)
+	at demo.BasicTest.aTestThatFails(BasicTest.java:15)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:436)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:115)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:170)
+	at org.junit.jupiter.engine.execution.ThrowableCollector.execute(ThrowableCollector.java:40)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:166)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:113)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:58)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor$NodeExecutor.lambda$executeRecursively$3(HierarchicalTestExecutor.java:112)
+	at org.junit.platform.engine.support.hierarchical.SingleTestExecutor.executeSafely(SingleTestExecutor.java:66)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor$NodeExecutor.executeRecursively(HierarchicalTestExecutor.java:108)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor$NodeExecutor.execute(HierarchicalTestExecutor.java:79)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor$NodeExecutor.lambda$executeRecursively$2(HierarchicalTestExecutor.java:120)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:430)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor$NodeExecutor.lambda$executeRecursively$3(HierarchicalTestExecutor.java:120)
+	at org.junit.platform.engine.support.hierarchical.SingleTestExecutor.executeSafely(SingleTestExecutor.java:66)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor$NodeExecutor.executeRecursively(HierarchicalTestExecutor.java:108)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor$NodeExecutor.execute(HierarchicalTestExecutor.java:79)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor$NodeExecutor.lambda$executeRecursively$2(HierarchicalTestExecutor.java:120)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:430)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor$NodeExecutor.lambda$executeRecursively$3(HierarchicalTestExecutor.java:120)
+	at org.junit.platform.engine.support.hierarchical.SingleTestExecutor.executeSafely(SingleTestExecutor.java:66)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor$NodeExecutor.executeRecursively(HierarchicalTestExecutor.java:108)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor$NodeExecutor.execute(HierarchicalTestExecutor.java:79)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:55)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:43)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:170)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:154)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:90)
+	at org.junit.platform.console.tasks.ConsoleTestExecutor.executeTests(ConsoleTestExecutor.java:65)
+	at org.junit.platform.console.tasks.ConsoleTestExecutor.lambda$execute$0(ConsoleTestExecutor.java:57)
+	at org.junit.platform.console.tasks.CustomContextClassLoaderExecutor.invoke(CustomContextClassLoaderExecutor.java:33)
+	at org.junit.platform.console.tasks.ConsoleTestExecutor.execute(ConsoleTestExecutor.java:57)
+	at org.junit.platform.console.ConsoleLauncher.executeTests(ConsoleLauncher.java:84)
+	at org.junit.platform.console.ConsoleLauncher.execute(ConsoleLauncher.java:74)
+	at org.junit.platform.console.ConsoleLauncher.execute(ConsoleLauncher.java:47)
+	at org.junit.platform.console.ConsoleLauncher.main(ConsoleLauncher.java:39)
+]]></failure>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:demo.BasicTest]/[method:aTestThatFails()]
+display-name: aTestThatFails()
+]]></system-out>
+</testcase>
+<testcase name="tryItOut()" classname="demo.BasicTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:demo.BasicTest]/[method:tryItOut()]
+display-name: tryItOut()
+]]></system-out>
+</testcase>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]
+display-name: JUnit Jupiter
+]]></system-out>
+</testsuite>

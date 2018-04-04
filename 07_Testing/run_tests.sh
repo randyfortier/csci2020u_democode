@@ -1,2 +1,2 @@
 #!/bin/bash
-java -cp "lib/*" org.junit.platform.console.ConsoleLauncher -cp "build/classes/test:build/classes/main" --scan-class-path
+java -jar lib/junit-platform-console-standalone-1.1.0.jar --cp "build/classes/java/main:build/classes/java/test" --scan-class-path
