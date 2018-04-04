@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="JUnit Jupiter" tests="2" skipped="0" failures="1" errors="0" time="0.042" hostname="DESKTOP-U0HINQT" timestamp="2018-04-04T11:29:46">
+<testsuite name="JUnit Jupiter" tests="1" skipped="0" failures="0" errors="0" time="0.039" hostname="DESKTOP-U0HINQT" timestamp="2018-04-04T13:27:01">
 <properties>
 <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
 <property name="file.encoding" value="windows-1252"/>
@@ -42,7 +42,7 @@
 <property name="sun.cpu.isalist" value="amd64"/>
 <property name="sun.desktop" value="windows"/>
 <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
-<property name="sun.java.command" value="org.junit.platform.console.ConsoleLauncher --details NONE --scan-class-path D:\Winter 2018\CSCI 2020u\demos_w2018\csci2020u_democode\07_Testing\build\classes\java\main;D:\Winter 2018\CSCI 2020u\demos_w2018\csci2020u_democode\07_Testing\build\resources\main;D:\Winter 2018\CSCI 2020u\demos_w2018\csci2020u_democode\07_Testing\build\classes\java\test;D:\Winter 2018\CSCI 2020u\demos_w2018\csci2020u_democode\07_Testing\build\resources\test -n ^.*Tests?$ -e junit-jupiter --reports-dir D:\Winter 2018\CSCI 2020u\demos_w2018\csci2020u_democode\07_Testing\build\test-results\junit-platform"/>
+<property name="sun.java.command" value="org.junit.platform.console.ConsoleLauncher --details NONE --scan-class-path D:\Winter 2018\CSCI 2020u\demos_w2018\csci2020u_democode\07_Testing\build\classes\java\main;D:\Winter 2018\CSCI 2020u\demos_w2018\csci2020u_democode\07_Testing\build\resources\main;D:\Winter 2018\CSCI 2020u\demos_w2018\csci2020u_democode\07_Testing\build\classes\java\test;D:\Winter 2018\CSCI 2020u\demos_w2018\csci2020u_democode\07_Testing\build\resources\test -n ^.*Tests?$ --include-package validation -T slow -e junit-jupiter --reports-dir D:\Winter 2018\CSCI 2020u\demos_w2018\csci2020u_democode\07_Testing\build\test-results\junit-platform"/>
 <property name="sun.java.launcher" value="SUN_STANDARD"/>
 <property name="sun.jnu.encoding" value="Cp1252"/>
 <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -56,81 +56,10 @@
 <property name="user.timezone" value="America/New_York"/>
 <property name="user.variant" value=""/>
 </properties>
-<testcase name="aTestThatFails()" classname="demo.BasicTest" time="0.01">
-<failure message="This should never succeed since 1 != 2 ==&gt; expected: &lt;1&gt; but was: &lt;2&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: This should never succeed since 1 != 2 ==> expected: <1> but was: <2>
-	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:52)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:154)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:312)
-	at demo.BasicTest.aTestThatFails(BasicTest.java:15)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:436)
-	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:115)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:170)
-	at org.junit.jupiter.engine.execution.ThrowableCollector.execute(ThrowableCollector.java:40)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:166)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:113)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:58)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor$NodeExecutor.lambda$executeRecursively$3(HierarchicalTestExecutor.java:112)
-	at org.junit.platform.engine.support.hierarchical.SingleTestExecutor.executeSafely(SingleTestExecutor.java:66)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor$NodeExecutor.executeRecursively(HierarchicalTestExecutor.java:108)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor$NodeExecutor.execute(HierarchicalTestExecutor.java:79)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor$NodeExecutor.lambda$executeRecursively$2(HierarchicalTestExecutor.java:120)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
-	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
-	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
-	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:430)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor$NodeExecutor.lambda$executeRecursively$3(HierarchicalTestExecutor.java:120)
-	at org.junit.platform.engine.support.hierarchical.SingleTestExecutor.executeSafely(SingleTestExecutor.java:66)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor$NodeExecutor.executeRecursively(HierarchicalTestExecutor.java:108)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor$NodeExecutor.execute(HierarchicalTestExecutor.java:79)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor$NodeExecutor.lambda$executeRecursively$2(HierarchicalTestExecutor.java:120)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
-	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
-	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
-	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:430)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor$NodeExecutor.lambda$executeRecursively$3(HierarchicalTestExecutor.java:120)
-	at org.junit.platform.engine.support.hierarchical.SingleTestExecutor.executeSafely(SingleTestExecutor.java:66)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor$NodeExecutor.executeRecursively(HierarchicalTestExecutor.java:108)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor$NodeExecutor.execute(HierarchicalTestExecutor.java:79)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:55)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:43)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:170)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:154)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:90)
-	at org.junit.platform.console.tasks.ConsoleTestExecutor.executeTests(ConsoleTestExecutor.java:65)
-	at org.junit.platform.console.tasks.ConsoleTestExecutor.lambda$execute$0(ConsoleTestExecutor.java:57)
-	at org.junit.platform.console.tasks.CustomContextClassLoaderExecutor.invoke(CustomContextClassLoaderExecutor.java:33)
-	at org.junit.platform.console.tasks.ConsoleTestExecutor.execute(ConsoleTestExecutor.java:57)
-	at org.junit.platform.console.ConsoleLauncher.executeTests(ConsoleLauncher.java:84)
-	at org.junit.platform.console.ConsoleLauncher.execute(ConsoleLauncher.java:74)
-	at org.junit.platform.console.ConsoleLauncher.execute(ConsoleLauncher.java:47)
-	at org.junit.platform.console.ConsoleLauncher.main(ConsoleLauncher.java:39)
-]]></failure>
+<testcase name="testPhoneValidation(TestInfo)" classname="validation.ValidatorTest" time="0.009">
 <system-out><![CDATA[
-unique-id: [engine:junit-jupiter]/[class:demo.BasicTest]/[method:aTestThatFails()]
-display-name: aTestThatFails()
-]]></system-out>
-</testcase>
-<testcase name="tryItOut()" classname="demo.BasicTest" time="0">
-<system-out><![CDATA[
-unique-id: [engine:junit-jupiter]/[class:demo.BasicTest]/[method:tryItOut()]
-display-name: tryItOut()
+unique-id: [engine:junit-jupiter]/[class:validation.ValidatorTest]/[method:testPhoneValidation(org.junit.jupiter.api.TestInfo)]
+display-name: Testing phone validator
 ]]></system-out>
 </testcase>
 <system-out><![CDATA[

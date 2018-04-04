@@ -2,7 +2,7 @@ package validation;
 
 public class Validator {
   public boolean validatePhone(String toCheck) {
-    String pattern = "([0-9]{3}-)?[0-9]{3}-[0-9]{4}";
+    String pattern = "([0-9]{3}(-)?)?[0-9]{3}(-)?[0-9]{4}";
     return toCheck.matches(pattern);
   }
 

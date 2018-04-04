@@ -20,11 +20,11 @@ junitPlatform {
       include 'junit-jupiter'
     }
     tags {
-      //exclude 'slow'
+      exclude 'slow'
     }
-    //packages {
-    //  include 'demo' //, 'validation'
-    //}
+    packages {
+      include 'validation'
+    }
   }
 }
 
